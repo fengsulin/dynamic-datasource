@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: @project.artifactId@
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    datasource1:
+      druid:
+        initial-size: 1
+        min-idle: 1
+        max-active: 20
+  #      是否检测连接池里连接的可用性
+        test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://192.168.2.131:3306/datasource1?serverTimezone=Asia/Shanghai&useUnicode=true&useSSL=false
+    datasource2:
+      type: com.alibaba.druid.pool.DruidDataSource
+      druid:
+        initial-size: 1
+        min-idle: 1
+        max-active: 20
+        #      是否检测连接池里连接的可用性
+        test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: 123456
+      url: jdbc:mysql://192.168.2.131:3306/datasource2?serverTimezone=Asia/Shanghai&useUnicode=true&useSSL=false
+
